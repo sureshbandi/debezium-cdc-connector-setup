@@ -2,14 +2,24 @@
     "name": "sql-server-cdc-connector",
     "config": {
         "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
-        "database.hostname": "",
-        "database.port": "",
-        "database.user": "",
+        "database.hostname": "192.168.0.105",
+        "database.port": "1433",
+        "database.user": "cdc-test-user",
         "database.password": "",
-        "database.dbname": "",
-        "database.server.name": "",
-        "table.include.list": "",
-        "database.history.kafka.bootstrap.servers": "localhost:9092",
-        "database.history.kafka.topic": "dbhistory.inventory"
+        "database.dbname": "Test_CDCConnector",
+        "database.server.name": "DESKTOP-L6HFUU9",
+        "table.include.list": "dbo.Employee",
+        "database.history.kafka.bootstrap.servers": "kafka:29092",
+        "database.history.kafka.topic": "dbhistory.sql-server-cdc",
+        "database.history.kafka.recovery.poll.interval.ms": "5000",
+        "database.history.kafka.recovery.attempts": "4",
+        "tasks.max": "1",
+        "database.encrypt": "true",
+        "database.trustServerCertificate": "true",
+        "database.applicationName": "Debezium",
+        "snapshot.mode": "initial",
+        "topic.creation.default.replication.factor": 1,
+        "topic.creation.default.partitions": 1,
+        "topic.creation.enable": true
     }
 }
