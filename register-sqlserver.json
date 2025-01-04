@@ -1,0 +1,15 @@
+{
+    "name": "sql-server-cdc-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+        "database.hostname": "",
+        "database.port": "",
+        "database.user": "",
+        "database.password": "",
+        "database.dbname": "",
+        "database.server.name": "",
+        "table.include.list": "",
+        "database.history.kafka.bootstrap.servers": "localhost:9092",
+        "database.history.kafka.topic": "dbhistory.inventory"
+    }
+}
